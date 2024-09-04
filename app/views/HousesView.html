@@ -1,0 +1,52 @@
+<div class="container">
+    <section class="row">
+        <div id="house-form" class="col-12 d-none">
+            <form onsubmit="app.HousesController.createHouse()">
+                <div class="mb-3">
+                    <label for="bedrooms" class="form-label mt-3">Bedrooms</label>
+                    <input type="number" class="form-control" id="bedrooms" name="bedrooms" required min="1"
+                        placeholder="Number of bedrooms">
+                </div>
+                <div class="mb-3">
+                    <label for="bathrooms" class="form-label">Bathrooms</label>
+                    <input type="number" class="form-control" id="bathrooms" name="bathrooms" required min="1"
+                        placeholder="Number of bathrooms">
+                </div>
+                <div class="mb-3">
+                    <label for="levels" class="form-label">Levels</label>
+                    <input type="number" class="form-control" id="levels" name="levels" required min="1"
+                        placeholder="Number of levels">
+                </div>
+                <div class="mb-3">
+                    <label for="imgUrl" class="form-label">Image URL</label>
+                    <input type="url" class="form-control" id="imgUrl" name="imgUrl" required maxlength="500"
+                        placeholder="House image URL">
+                </div>
+                <div class="mb-3">
+                    <label for="year" class="form-label">Year</label>
+                    <input type="number" class="form-control" id="year" name="year" required min="1800" max="2023"
+                        placeholder="Year built">
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="number" class="form-control" id="price" name="price" required min="0"
+                        placeholder="Price">
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="form-control" id="description" name="description" maxlength="500"
+                        placeholder="House description"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary mb-3">Create House Listing</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+
+<div class="container">
+    <section id="house-listing" class="row">
+        <!-- Houses will be drawn here -->
+    </section>
+</div>

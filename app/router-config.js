@@ -1,6 +1,7 @@
 import { AccountController } from "./controllers/AccountController.js";
 import { CarsController } from "./controllers/CarsController.js";
 import { HomeController } from "./controllers/HomeController.js";
+import { HousesController } from "./controllers/HousesController.js";
 import { AuthGuard } from "./services/AuthService.js";
 import { Router } from "./utils/Router.js";
 
@@ -15,7 +16,10 @@ export const router = new Router([
         <p>Gregslist</p>
         <a href="#/cars">
           <button class="btn btn-outline-dark" title="Go to the cars page">🚗</button>
-        </a>
+          </a>
+          <a href="#/houses">
+          <button class="btn btn-outline-dark" title="Go to the house page">House</button>
+          </a>
       </div>
     </div>
     `
@@ -24,6 +28,11 @@ export const router = new Router([
     path: '#/cars',
     controllers: [CarsController],
     view: 'app/views/CarsView.html'
+  },
+  {
+    path: '#/houses',
+    controllers: [HousesController],
+    view: 'app/views/HousesView.html'
   },
   {
     path: '#/about',
